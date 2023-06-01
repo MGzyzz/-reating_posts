@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../static/styles.css">
+    <title>Title</title>
+</head>
+<body>
+  <h1>Hello {{ user.name|title }} {{ user.surname|title }} </h1>
+  <h3>Today: {{ user.current_datetime }}</h3>
+  <h4>Phone: {{ user.phone }}</h4>
+  <form action="/posts" method="POST">
+      <label>
+        <input type="text" name="title">
+      </label>
+  </form>
+
+  {{ user.contacts|join(', ') }}
+<!--  <ol>-->
+<!--    {% for i in user.contacts  %}-->
+
+<!--    <li>{{ i }}</li>-->
+
+<!--    {% endfor %}-->
+<!--  </ol>-->
+
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda nostrum quasi voluptate. Ad blanditiis deserunt distinctio error facilis incidunt maxime nostrum, numquam placeat? Error hic obcaecati quas quis saepe velit.</p>
+</body>
+</html>
